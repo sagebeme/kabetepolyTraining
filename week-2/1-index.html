@@ -5,6 +5,47 @@
 <html>
 <head>
   <title>Contact Form</title>
+    <style>
+    h2 {
+      text-align: center;
+    }
+    form {
+      text-align: center;
+      background: #808080;
+      padding: 20px 15px;
+      border-radius: 20px;
+      max-width: 500px;
+      margin: 0 auto;
+      border: 2px solid #000;
+    }
+    form label{
+      display: block;
+      font-size: 30px;
+      font-weight: 400;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+    .btn{
+      padding: 10px 20px;
+      background: #000;
+      color: #fff;
+      border-radius: 10px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .btn:hover{
+      border: 2px solid #000;
+      background: none;
+      transform: scale(1.05);
+      transition: all .5s ease;
+    }
 </head>
 <body>
   <h2>Contact Form</h2>
@@ -17,5 +58,20 @@
     <textarea id="message" name="message"></textarea><br><br>
     <input type="submit" value="Submit">
   </form>
+       // <script>
+    const form = document.querySelector('form');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+
+    form.addEventListener('submit', (event) =>{
+      event.preventDefault(); //To prevent form submission
+
+      if (!nameInput.value || !emailInput.value || !messageInput.value){
+        alert('Please fill the spaces');
+        return;
+      }
+    });//
+  </script>
 </body>
 </html>
