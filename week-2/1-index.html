@@ -58,7 +58,7 @@
     <textarea id="message" name="message"></textarea><br><br>
     <input type="submit" value="Submit">
   </form>
-       // <script>
+       <script>
     const form = document.querySelector('form');
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
@@ -69,9 +69,11 @@
 
       if (!nameInput.value || !emailInput.value || !messageInput.value){
         alert('Please fill the spaces');
+          else
+              console.log('Form submitted successfully');
         return;
       }
-    });//
+    });
   </script>
 </body>
 </html>
